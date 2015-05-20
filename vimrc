@@ -13,9 +13,12 @@ Bundle 'gmarik/vundle'
 
 " My bundles
 Bundle 'scrooloose/syntastic'
-"Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
 Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'mattn/emmet-vim'
 "Plugin 'wincent/command-t'
 
 " \ is the leader character
@@ -39,7 +42,6 @@ set smartcase		" don't ignore case if any char in capital in search
 nmap j gj
 nmap k gk
 
-nnoremap <leader><space> :nohlsearch<cr>
 
 
 colorscheme desert
@@ -64,6 +66,10 @@ nnoremap $ <nop>
 "" The Leader key to escape from ESC
 nnoremap <leader>w :w!<cr>
 nnoremap <leader>q :q<cr>
+"" Toggle NERDTree
+nmap <leader>e :NERDTreeToggle<CR>
+"" toggle hightlig
+nnoremap <leader><space> :nohlsearch<cr>
 filetype plugin on
 filetype indent on
 
@@ -81,3 +87,9 @@ set noswapfile
 set ai              " set auto indent
 set si              " set smart indent
 "autocmd VimEnter * NERDTree
+"set up 256 colors mode
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+          set t_Co=256
+endif
+
+colorscheme twilight256
