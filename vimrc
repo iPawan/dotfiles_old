@@ -19,6 +19,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
+Plugin 'wikitopian/hardmode.git'
 "Plugin 'wincent/command-t'
 
 " \ is the leader character
@@ -42,7 +43,17 @@ set smartcase		" don't ignore case if any char in capital in search
 nmap j gj
 nmap k gk
 
+" Disable the arrow keys
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
 
+" Go spartan and ban the hjkl keys too
+"noremap h <nop>
+"noremap j <nop>
+"noremap k <nop>
+"noremap l <nop>
 
 colorscheme desert
 syntax on
@@ -93,3 +104,4 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 endif
 
 colorscheme twilight256
+
