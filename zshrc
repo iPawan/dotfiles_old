@@ -102,3 +102,8 @@ alias tms="tmuxinator start $1"
 alias tmo="tmuxinator open $1"
 alias tmn="tmuxinator new $1"
 source ~/.bin/tmuxinator.zsh
+
+alias vim="/usr/local/Cellar/vim/7.4.712/bin/vim"
+alias vi="/usr/local/Cellar/vim/7.4.712/bin/vim"
+
+alias r="source ~/.zshrc"

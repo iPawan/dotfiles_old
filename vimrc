@@ -2,8 +2,7 @@
 " Date : 02/12/2014
 " Location : denver colorado USA
 " Age : 29
-" Pathogen installed and running
-
+" Using Vundle now
 
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
@@ -15,11 +14,13 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
 Plugin 'wikitopian/hardmode.git'
+Plugin 'tpope/vim-surround.git'
 "Plugin 'wincent/command-t'
 
 " \ is the leader character
@@ -55,7 +56,6 @@ noremap <Right> <nop>
 "noremap k <nop>
 "noremap l <nop>
 
-colorscheme desert
 syntax on
 syntax enable
 set tabstop=4 		" number of visual spaces per TAB
@@ -84,6 +84,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 filetype plugin on
 filetype indent on
 
+nnoremap <leader>cv :e $MYVIMRC<CR> " type ,ev to ecit the vimrc file
 "" No annoying sounds on errors
 set noerrorbells
 set visualbell
@@ -103,5 +104,9 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
           set t_Co=256
 endif
 
-colorscheme twilight256
+"set colorscheme
+set background=dark
+colorscheme solarized
 
+"Reload vimrc
+nnoremap<leader>r :source $MYVIMRC<CR>
