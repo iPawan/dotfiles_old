@@ -47,12 +47,19 @@ ZSH_THEME="cloud"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Source common profile file
+
+source ~/.profile
+
 # User configuration
 
-export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:$HOME/Learning/gocode/bin:~/Learning/gocode/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# export GOPATH for workspace
+export GOPATH="/Users/pawan/Learning/gocode"
 source $ZSH/oh-my-zsh.sh
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -78,6 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias setGoPath="export GOPATH=$(pwd)"
 
 export EDITOR="vim"
 bindkey -v
@@ -103,7 +111,12 @@ alias tmo="tmuxinator open $1"
 alias tmn="tmuxinator new $1"
 source ~/.bin/tmuxinator.zsh
 
-alias vim="/usr/local/Cellar/vim/7.4.712/bin/vim"
-alias vi="/usr/local/Cellar/vim/7.4.712/bin/vim"
+# alias vim=/usr/local/Cellar/vim/7.4.712/bin/vim
+alias vim ="/usr/local/bin/nvim"
+alias vi="/usr/local/bin/nvim"
+#/usr/local/Cellar/vim/7.4.712/bin/vim
 
 alias r="source ~/.zshrc"
+alias py="python3"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

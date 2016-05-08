@@ -1,7 +1,7 @@
 " Author : Pawan Pawar
 " Date : 02/12/2014
-" Location : denver colorado USA
-" Age : 29
+" Location : Denver colorado USA
+" Age : 31 
 " Using Vundle now
 
 set rtp+=~/.vim/bundle/vundle
@@ -21,6 +21,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'mattn/emmet-vim'
 Plugin 'wikitopian/hardmode.git'
 Plugin 'tpope/vim-surround.git'
+Plugin 'ervandew/supertab'
 "Plugin 'wincent/command-t'
 
 " \ is the leader character
@@ -110,3 +111,4 @@ colorscheme solarized
 
 "Reload vimrc
 nnoremap<leader>r :source $MYVIMRC<CR>
+
